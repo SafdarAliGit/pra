@@ -1,0 +1,46 @@
+{
+ "custom_fields": [
+  {
+   "dt": "Sales Invoice",
+   "fieldname": "custom_post_to_pra",
+   "fieldtype": "Check",
+   "label": "Post to PRA",
+   "insert_after": "due_date",
+   "allow_on_submit": 1
+  },
+  {
+   "dt": "Sales Invoice",
+   "fieldname": "custom_pra_invoice_no",
+   "fieldtype": "Data",
+   "label": "PRA Invoice No",
+   "insert_after": "custom_post_to_pra",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "dt": "Sales Invoice",
+   "fieldname": "custom_pra_qr_code",
+   "fieldtype": "Attach Image",
+   "label": "PRA QR Code",
+   "insert_after": "custom_pra_invoice_no",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "dt": "Sales Invoice",
+   "fieldname": "custom_usin",
+   "fieldtype": "Data",
+   "label": "USIN",
+   "description": "User Invoice Number sent to PRA to cross-reference this invoice (derived from the invoice name).",
+   "insert_after": "custom_pra_qr_code",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Sales Invoice",
+ "sync_on_migrate": 1
+}

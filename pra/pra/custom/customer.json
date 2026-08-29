@@ -1,0 +1,15 @@
+{
+ "custom_fields": [
+  {
+   "dt": "Customer",
+   "fieldname": "custom_cnic",
+   "fieldtype": "Data",
+   "label": "CNIC",
+   "description": "Buyer CNIC sent to PRA as BuyerCNIC (format: 11111-2222222-3).",
+   "insert_after": "tax_id"
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Customer",
+ "sync_on_migrate": 1
+}

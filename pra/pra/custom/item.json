@@ -1,0 +1,15 @@
+{
+ "custom_fields": [
+  {
+   "dt": "Item",
+   "fieldname": "custom_pct_code",
+   "fieldtype": "Link",
+   "label": "PCT Code",
+   "options": "PCT Code",
+   "insert_after": "item_group"
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Item",
+ "sync_on_migrate": 1
+}

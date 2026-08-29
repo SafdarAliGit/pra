@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company",
+ "creation": "2026-08-29 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "pos_id",
+  "access_code",
+  "column_break_lqjg",
+  "token",
+  "environment"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "POS Registration Number issued by PRA on POS registration (Point of Sale Registration > POS Details).",
+   "fieldname": "pos_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "POS ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Access Code shown against the POS ID on the PRA registration portal. Kept for reference; not sent to the API.",
+   "fieldname": "access_code",
+   "fieldtype": "Data",
+   "label": "Access Code"
+  },
+  {
+   "fieldname": "column_break_lqjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Bearer Token shown against the POS ID under POS Details on the PRA registration portal. Used to authenticate the direct cloud POST to PRA's IMS endpoint.",
+   "fieldname": "token",
+   "fieldtype": "Password",
+   "label": "Token",
+   "reqd": 1
+  },
+  {
+   "default": "sandbox",
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Environment",
+   "options": "sandbox\nproduction",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-29 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pra",
+ "name": "Pra Settings Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

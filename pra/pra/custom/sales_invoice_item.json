@@ -1,0 +1,16 @@
+{
+ "custom_fields": [
+  {
+   "dt": "Sales Invoice Item",
+   "fieldname": "custom_pct_code",
+   "fieldtype": "Data",
+   "label": "PCT Code",
+   "insert_after": "item_name",
+   "fetch_from": "item_code.custom_pct_code",
+   "in_list_view": 1
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Sales Invoice Item",
+ "sync_on_migrate": 1
+}
