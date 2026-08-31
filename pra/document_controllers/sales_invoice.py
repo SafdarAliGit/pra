@@ -95,6 +95,7 @@ def get_mapped_data(doc, settings):
 	total_tax_charged = round_half_up(sum(flt(i["TaxCharged"]) for i in items))
 	total_discount = round_half_up(sum(flt(i["Discount"]) for i in items))
 	total_bill_amount = round_half_up(total_sale_value + total_tax_charged - total_discount)
+	total_quantity = round_half_up(sum(flt(i["Quantity"]) for i in items))
 
 	data = {
 		"InvoiceNumber": "",
@@ -106,6 +107,7 @@ def get_mapped_data(doc, settings):
 		"BuyerPNTN": doc.tax_id or "",
 		"BuyerCNIC": get_buyer_cnic(doc),
 		"BuyerPhoneNumber": doc.contact_mobile or "",
+		"TotalQuantity": total_quantity,
 		"TotalSaleValue": total_sale_value,
 		"TotalTaxCharged": total_tax_charged,
 		"Discount": total_discount,
