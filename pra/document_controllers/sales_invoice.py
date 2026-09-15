@@ -98,9 +98,9 @@ def get_mapped_data(doc, settings):
 	total_quantity = round_half_up(sum(flt(i["Quantity"]) for i in items))
 
 	data = {
-		"InvoiceNumber": doc.get("custom_ct_ref") or "",
+		"InvoiceNumber": "",
 		"POSID": cint(settings.get("pos_id")),
-		"USIN": get_usin(doc.name),
+		"USIN": doc.get("custom_ct_ref") or "",
 		"RefUSIN": get_usin(doc.return_against) if invoice_type != 1 and doc.get("return_against") else None,
 		"DateTime": get_pra_datetime(doc),
 		"BuyerName": doc.customer_name or "",
